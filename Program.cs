@@ -11,21 +11,21 @@ while (true)
     switch (infoKey.Key)
     {
         case ConsoleKey.RightArrow:
-            for (int i = 0; i <= 1; i++)
+            for (int i = 0; i < 1; i++)
             {
                 Console.Write("\t");
             }
             break;
         case ConsoleKey.LeftArrow:
-            for (int i = 0; i <= 1; i++)
+            for (int i = 0; i < 1; i++)
             {
-                Console.Write("\b \b");
+                Console.Write("\b");
             }
             break;
         case ConsoleKey.DownArrow:
-            for (int i = 0; i <= 1 ; i++)
+            for (int i = 0; i < 1; i++)
             {
-                Console.WriteLine(star);
+                Console.Write(star);
             }
             break;
         case ConsoleKey.UpArrow:
