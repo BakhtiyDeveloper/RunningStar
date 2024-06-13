@@ -1,38 +1,78 @@
 ﻿using System;
 
+Console.Clear();
+
+Console.WriteLine("Welcome to our Running Star program");
+
+int axisX = 1;
+int axisY = 1;
+
+Console.SetCursorPosition(axisX, axisY);
+Console.Write('*');
 
 while (true)
 {
-    string star = "*";
-    Console.WriteLine(star);
-    
-    ConsoleKeyInfo infoKey = Console.ReadKey(true);
-      
-    switch (infoKey.Key)
+    if (axisX > 0 || axisY > 0)
     {
-        case ConsoleKey.RightArrow:
-            for (int i = 0; i < 1; i++)
+        if (Console.KeyAvailable)
+        {
+            ConsoleKeyInfo keyInput = Console.ReadKey(true);
+
+            Console.SetCursorPosition(axisX, axisY);
+            Console.Write(' ');
+
+            switch (keyInput.Key)
             {
-                Console.Write("\t");
+                case ConsoleKey.RightArrow:
+                    axisX++;
+                    break;
+                case ConsoleKey.LeftArrow:
+                    axisX--;
+                    break;
+                case ConsoleKey.UpArrow:
+                    axisY--;
+                    break;
+                case ConsoleKey.DownArrow:
+                    axisY++;
+                    break;
             }
-            break;
-        case ConsoleKey.LeftArrow:
-            for (int i = 0; i < 1; i++)
-            {
-                Console.Write("\b");
-            }
-            break;
-        case ConsoleKey.DownArrow:
-            for (int i = 0; i < 1; i++)
-            {
-                Console.Write(star);
-            }
-            break;
-        case ConsoleKey.UpArrow:
-            Console.Clear();
-            break;        
-        default:
-            Console.Write(infoKey.KeyChar);
-            break;
+
+            Console.SetCursorPosition(axisX, axisY);
+            Console.Write('*');
+        }
     }
+    else 
+    {
+        Console.WriteLine("An error key was entered !!! ");
+        Console.WriteLine("Please enter only '➡️' '⬅️' '⬆️' '⬇️' ");
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
