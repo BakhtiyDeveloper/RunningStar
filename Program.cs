@@ -52,8 +52,8 @@ try
 
 static void GetExceptionMessage()
 {
-    Console.WriteLine("You pressed the wrong key!!");
-    Console.WriteLine("Please start the program again!!!");
+    Console.WriteLine("You are out of console !!!");
+    Console.WriteLine("Please start the program again !!!");
 }
 
 
