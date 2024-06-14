@@ -109,6 +109,11 @@ Let me explain the code:
 '''
 static void GetExceptionMessage()
 {
+    int axisXTwo = 0;
+    int axisYTwo = 0;
+    
+    Console.SetCursorPosition(axisXTwo,axisYTwo)
+    
     Console.WriteLine("You are out of console !!!");
     Console.WriteLine("Please start the program again !!!");
 }
