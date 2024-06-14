@@ -16,7 +16,7 @@ try
     {
         if (Console.KeyAvailable)
         {
-            ConsoleKeyInfo keyInput = Console.ReadKey(true);
+            ConsoleKeyInfo keyInput = Console.ReadKey();
 
             Console.SetCursorPosition(axisX, axisY);
             Console.Write(' ');
@@ -46,12 +46,18 @@ try
     }
 
 }catch (Exception exception)
+
 {
     GetExceptionMessage();
 }
 
 static void GetExceptionMessage()
 {
+    int axisXTwo = 0;
+    int axisYTwo = 0;
+    
+    Console.SetCursorPosition(axisXTwo,axisYTwo)
+    
     Console.WriteLine("You are out of console !!!");
     Console.WriteLine("Please start the program again !!!");
 }
